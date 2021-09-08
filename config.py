@@ -1,4 +1,4 @@
-# Binance API keys. Read the README for instructions on how to get them
+# Binance API keys. Read the README for instructions on how to get these
 binance_us_apikey = ''
 binance_us_secretkey = ''
 
