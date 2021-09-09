@@ -136,7 +136,7 @@ class indicatorsBot():
         moving_average = btalib.ema(self.technicals, period=self.MA_timeframe).df.iloc[-1]['ema']
         rsi = btalib.rsi(self.technicals, period=self.RSI_timeframe).df.iloc[-1]['rsi']
         print("Updating "+config.ticker+" technicals: MA="+str(moving_average)+" RSI="+str(rsi))
-        self.technicals.loc[curr_time] = [curr_price, moving_average, rsi]
+        self.technicals.loc[curr_time] = [float(curr_price), moving_average, rsi]
 
     def check_buy_conditions(self):
         curr_price = float(self.technicals.iloc[-1]['close'])
